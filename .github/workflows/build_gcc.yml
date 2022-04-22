@@ -16,11 +16,6 @@ jobs:
 
                         - name: Test GCC Build
                           run: |
-                               echo "gcc directory"
-                               cd /usr/bin/gcc | ls
-                               echo "make directory"
-                               cd /usr/bin/make | ls
-                               echo "cmake directory"
-                               cd /usr/local/bin/cmake | ls
+                               gcc --version
                                
 
