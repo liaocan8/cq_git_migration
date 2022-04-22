@@ -17,7 +17,7 @@ jobs:
                         - name: Test GCC Build
                           run: |
                                which gcc
-                               which h5dump
+                               #  which h5dump
                                which make
                                which cmake
 
