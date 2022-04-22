@@ -1,0 +1,19 @@
+name: Chronus Quantum Continuous Integration - GCC  Build
+
+on: 
+        push:
+                branches: **
+
+jobs: 
+        build_intel:
+                runs-on: ubuntu-latest
+
+
+                steps:
+                        - name: Checkout Current CQ Branch
+                          uses: actions/checkout@v3
+
+
+                        - name: Test GCC Build
+                          run: |
+                               which gcc 

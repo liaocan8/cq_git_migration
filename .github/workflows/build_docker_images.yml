@@ -1,4 +1,4 @@
-name: Chronus Quantum Continuous Integration - Docker
+name: Chronus Quantum Continuous Integration - Docker Build
 
 on:
         push:
