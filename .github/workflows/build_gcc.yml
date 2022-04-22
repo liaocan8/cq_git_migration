@@ -21,6 +21,6 @@ jobs:
                                echo "make directory"
                                cd /usr/bin/make | ls
                                echo "cmake directory"
-                               cd /usr/local/bin/cmake
+                               cd /usr/local/bin/cmake | ls
                                
 
