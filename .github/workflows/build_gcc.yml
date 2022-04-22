@@ -16,8 +16,11 @@ jobs:
 
                         - name: Test GCC Build
                           run: |
-                               which gcc
-                               #  which h5dump
-                               which make
-                               which cmake
+                               echo "gcc directory"
+                               cd /usr/bin/gcc | ls
+                               echo "make directory"
+                               cd /usr/bin/make | ls
+                               echo "cmake directory"
+                               cd /usr/local/bin/cmake
+                               
 
