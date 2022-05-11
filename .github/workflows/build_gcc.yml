@@ -17,6 +17,5 @@ jobs:
                         - name: Test GCC Build
                           run: |
                                ls -l
-                               echo 'cyka blyat'
-                               
+                                
 
