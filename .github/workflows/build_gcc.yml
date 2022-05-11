@@ -6,7 +6,7 @@ on:
 
 jobs: 
         build_gcc:
-                runs-on: ubuntu-latest
+                runs-on: self-hosted
 
 
                 steps:
@@ -16,6 +16,6 @@ jobs:
 
                         - name: Test GCC Build
                           run: |
-                               gcc --version
+                               ls -l
                                
 
