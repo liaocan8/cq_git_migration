@@ -16,7 +16,7 @@ jobs:
 
                         - name: Test GCC Build
                           run: |
-                                  echo 'cyka blyat'
+                                  echo 'cyka'
                                   #                               source /home/ci_software/gcc-10.2.0.sh
                                   #                               mkdir build
                                   #                               cd build
