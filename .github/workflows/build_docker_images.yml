@@ -14,6 +14,8 @@ jobs:
 
                         - name: Test Building Docker Image
                           run:  |
+                                echo $DOCKERHUB_USERNAME
+                                echo $DOCKERHUB_PASSWORD
                                 export CQ_VERSION=$(grep "project(ChronusQ" -A 7 CMakeLists.txt | grep "VERSION" | sed 's/ \+VERSION //')
                                 docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
                                 docker build -t uwligroup/chronusq:$CQ_VERSION .

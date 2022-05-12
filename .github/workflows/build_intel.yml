@@ -2,7 +2,7 @@ name: Chronus Quantum Continuous Integration - Intel Build
 
 on: 
         push:
-                branches: '**'
+                branches: [master]
 
 jobs: 
         build_intel:
