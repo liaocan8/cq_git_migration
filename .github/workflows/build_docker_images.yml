@@ -2,11 +2,11 @@ name: Chronus Quantum Continuous Integration - Docker Build
 
 on:
         push:
-                branches: [master]
+                branches: '**'
 
 jobs:
         build_docker_image:
-                runs-on: ubuntu-latest
+                runs-on: self-hosted
 
                 steps:
                         - name: Building Docker Image
@@ -15,6 +15,7 @@ jobs:
                         - name: Test Building Docker Image
                           run:  |
                                 export CQ_VERSION=$(grep "project(ChronusQ" -A 7 CMakeLists.txt | grep "VERSION" | sed 's/ \+VERSION //')
+                                docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
                                 docker build -t uwligroup/chronusq:$CQ_VERSION .
                                 docker push uwligroup/chronusq:$CQ_VERSION
                                 docker tag uwligroup/chronusq:$CQ_VERSION uwligroup/chronusq:latest
